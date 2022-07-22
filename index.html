@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake and Ladder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    
+}
+.grid{
+    height:1020px;
+    width:1020px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid plum;
+    margin: 10px auto;
+    box-shadow: 15px 15px gray;
+}
+
+.box{
+    height:100px;
+    width: 100px;
+    background-color:rgba(230, 223, 223, 0.733);
+    text-align: center;
+    font-size:25px;
+    border:1px solid plum;
+    
+}
+.colored-box{
+    height:100px;
+    width: 100px;
+    background-color:plum;
+    text-align: center;
+    font-size:25px;
+    border:1px solid plum;
+}
+
+.shaded-box{
+    background-color: rgb(97, 12, 97) !important;
+    color: white!important;
+}
+
+.player1{
+    height:45px;
+    width:45px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left:25px;
+    bottom:0px;
+    z-index: 2;
+    border: 2px solid wheat;
+    box-shadow: 2px 2px gray;
+
+}
+
+.player2{
+    height:45px;
+    width:45px;
+    border-radius: 50%;
+    background-color:greenyellow;
+    position: relative;
+    left:25px;
+    bottom:0px;
+    z-index: 2;
+    border: 2px solid wheat;
+    box-shadow: 2px 2px gray;
+}
+
+.ladder{
+  
+    z-index: 1;
+    height:300px;
+    width: 80px;
+    transform: rotate(50deg);
+    position: absolute;
+    left:450px;
+    bottom:0px;
+    opacity: 0.50;
+
+}
+.ladder1{
+    z-index: 1;
+    height:300px;
+    width: 80px;
+    transform: rotate(130deg);
+    position: absolute;
+    left:1200px;
+    bottom:250px;
+    opacity: 0.50;
+   
+}
+.ladder2{
+    z-index: 1;
+    height:400px;
+    width: 80px;
+    transform: rotate(20deg);
+    position: absolute;
+    left:700px;
+    bottom:450px;
+    opacity: 0.50;
+}
+
+.snake{
+    z-index: 1;
+    height:40px;
+    width: 300px;
+    transform: rotate(305deg);
+    position: absolute;
+    left:720px;
+    bottom:50px;
+    opacity: 0.80;
+    
+}
+.snake1{
+    z-index: 1;
+    height:500px;
+    width: 80px;
+    transform: rotate(20deg);
+    position: absolute;
+    left:10px;
+    bottom:300px;
+    opacity:0.9;
+}
+
+.snake2{
+    z-index: 1;
+    height:300px;
+    width: 300px;
+    transform: rotate(0deg);
+    position: absolute;
+    left:1000px;
+    bottom:520px;
+    opacity:0.70;
+   
+}
+.score{
+    margin:auto;
+    border: 1px solid purple;
+    position: absolute;
+    top:500px;
+    left:100px;
+    height:100px;
+    width: 100px;
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px gray;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="grid" class="grid">
+
+    </div>
+
+
+
+   <div class="score">
+    <div id="text">
+        player red
+    </div>
+    
+    <button type="button" onclick="numgen()">
+        Roll dice
+      </button>
+    <div id="dice" >
+
+    </div>
+   </div>
+   <script src="https://kit.fontawesome.com/590f303e20.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
